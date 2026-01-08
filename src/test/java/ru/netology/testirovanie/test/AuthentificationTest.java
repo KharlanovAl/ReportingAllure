@@ -55,7 +55,7 @@ AuthentificationTest {
 
         $("[data-test-id=login] input").setValue(unregisteredUser.getLogin());
         $("[data-test-id=password] input").setValue(unregisteredUser.getPassword());
-        $("[data-test-id=action-login]");
+        $("[data-test-id=action-login]").click();
 
         $("[data-test-id=error-notification] .notification__content")
                 .shouldHave(Condition.text("Ошибка! Неверно указан логин или пароль"))
